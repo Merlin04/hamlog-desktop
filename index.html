@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="/src/water.css"/>
+    <link rel="stylesheet" href="/src/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>hamlog</title>
+    <script type="module" src="/src/main.ts" defer></script>
+</head>
+
+<body>
+<h1>hamlog</h1>
+<button id="addButton">add</button>
+<table>
+    <thead>
+    <tr>
+        <th>src</th>
+        <th>dest</th>
+        <th>mode</th>
+        <th>freq</th>
+        <th>.</th>
+    </tr>
+    </thead>
+    <tbody id="qsos"></tbody>
+</table>
+<div id="backdrop"></div>
+<dialog id="details">
+    <header>details</header>
+    <form method="dialog">
+        <table>
+            <tbody>
+            <tr>
+                <td>source</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>destination</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>freq</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>time on</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>time off</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>mode</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>their name</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>their qth</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>our square</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>notes</td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+        <menu>
+            <button>close</button>
+        </menu>
+    </form>
+</dialog>
+<dialog id="add">
+    <header>add</header>
+    <form method="dialog">
+        <label for="source">source</label>
+        <input id="source" name="source" type="text" required/>
+        <label for="destination">destination</label>
+        <input id="destination" name="destination" type="text" required/>
+        <label for="freq">freq</label>
+        <input id="freq" name="freq" type="text" required/>
+        <label for="time-on">time on</label>
+        <input id="time-on" name="time_on" type="datetime-local" required/>
+        <label for="time-off">time off</label>
+        <input id="time-off" name="time_off" type="datetime-local" required/>
+        <label for="mode">mode</label>
+        <input id="mode" name="mode" type="text" required/>
+        <label for="their-name">their name</label>
+        <input id="their-name" name="their-name" type="text"/>
+        <label for="their-qth">their qth</label>
+        <input id="their-qth" name="their_qth" type="text"/>
+        <label for="our-square">our square</label>
+        <input id="our-square" name="our_square" type="text"/>
+        <label for="notes">notes</label>
+        <input id="notes" name="notes" type="text"/>
+        <menu>
+            <button value="cancel">cancel</button>
+            <button type="submit">submit</button>
+        </menu>
+    </form>
+</dialog>
+</body>
+</html>
