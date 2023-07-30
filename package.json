@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@tauri-apps/api": "^1.4.0",
-    "tahitiensis": "^0.1.0"
+    "niue": "^0.2.0",
+    "preact": "^10.16.0"
   },
   "devDependencies": {
+    "@preact/preset-vite": "^2.5.0",
     "@tauri-apps/cli": "^1.4.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.4"

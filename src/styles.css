@@ -11,23 +11,6 @@ td button {
     padding-left: 10px;
 }
 
-#details {
-    /*top: 10px;*/
-    /*bottom: 10px;*/
-
-    /*overflow: auto;*/
-}
-
-#backdrop[data-open="true"] {
-    /* not all browsers support ::backdrop, it seems */
-    position: fixed;
-    inset: 0;
-
-    background: rgba(0,0,0,.61);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-}
-
 dialog::backdrop {
     display: none;
 }
@@ -40,6 +23,18 @@ dialog {
     max-height: 100vh;
     background-color: unset;
 }
+
+dialog::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,.61);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+dialog > * { position: relative; }
 
 dialog > *:last-child {
     padding: 10px 30px;
@@ -55,4 +50,13 @@ dialog menu {
     display: flex;
     padding: 0;
     justify-content: flex-end;
+}
+
+#addForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#addForm > div:last-of-type, #addForm menu {
+    grid-column: auto / span 2;
 }
